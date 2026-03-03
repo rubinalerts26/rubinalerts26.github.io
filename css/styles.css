@@ -1327,6 +1327,52 @@ a:hover {
 }
 
 /* ============================================
+   Footer Logos
+   ============================================ */
+.footer-logos {
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto 0;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(0, 186, 188, 0.1);
+}
+
+.footer-logos-label {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logos-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-logo {
+    height: 55px;
+    width: auto;
+    opacity: 0.85;
+    transition: var(--transition-fast);
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}
+
+.footer-funding-note {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ============================================
    Print Styles
    ============================================ */
 @media print {
