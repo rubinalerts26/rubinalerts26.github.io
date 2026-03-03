@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rubin Alerts and AI Hackathon 2026 - Developing AI tools for the Vera C. Rubin Observatory alert stream. April 1-3, 2026 at SkAI Institute, Chicago, IL.">
+    <meta name="keywords" content="Rubin Observatory, LSST, alerts, AI, machine learning, hackathon, SkAI Institute, astronomy">
+    <title>Rubin Alerts & AI Hackathon 2026</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-text">Rubin Alerts 2026</span>
+            </a>
+
+            <input type="checkbox" id="nav-toggle" class="hamburger-checkbox">
+            <label for="nav-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active jiggle-link">Home</a></li>
+                <li><a href="program.html" class="jiggle-link">Program</a></li>
+                <li><a href="participants.html" class="jiggle-link">Participants & Registration</a></li>
+                <li><a href="travel.html" class="jiggle-link">Travel & Lodging</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars" id="stars"></div>
+        <div class="hero-background-curve">
+            <svg viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice">
+                <!-- Alert light curve decorations -->
+                <path d="M250,250 C300,200 320,240 360,230 S450,280 520,300" class="curve-path" />
+                <path d="M150,500 C200,450 230,480 280,460 S400,550 500,580" class="curve-path" />
+                <path d="M250,750 C300,650 330,780 380,760 S500,850 600,880" class="curve-path" />
+                <path d="M950,200 C1000,140 1030,210 1080,200 S1200,250 1250,280" class="curve-path" />
+                <path d="M1050,500 C1100,430 1120,460 1160,480 S1300,550 1400,570" class="curve-path" />
+                <path d="M950,750 C1000,680 1030,710 1080,730 S1200,790 1240,800" class="curve-path" />
+                <path d="M650,200 C700,120 730,160 780,210 S900,250 1000,260" class="curve-path" />
+                <path d="M600,800 C650,780 660,850 700,870 S800,890 900,900" class="curve-path" />
+            </svg>
+        </div>
+        <div class="hero-content">
+            <span class="hero-badge">April 1–3, 2026</span>
+            <h1>Rubin Alerts &amp; AI Hackathon</h1>
+            <p class="hero-subtitle">
+                A hands-on hackathon developing AI tools for real-time processing of the Vera C. Rubin Observatory alert stream
+            </p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    SkAI Institute, Chicago, IL
+                </div>
+                <div class="hero-meta-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
+                    </svg>
+                    3-Day Hackathon
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="participants.html" class="btn btn-primary jiggle-link">Register Now</a>
+                <a href="#vision" class="btn btn-secondary jiggle-link">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="section section-secondary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Purpose</span>
+                <h2>The Rubin Alert Stream</h2>
+                <p>Preparing the community to harness the most powerful time-domain survey ever built</p>
+            </div>
+            <div class="data-content">
+                <div class="data-text">
+                    <h3>~10 Million Alerts Per Night</h3>
+                    <p>The Vera C. Rubin Observatory's Legacy Survey of Space and Time (LSST) will scan the entire southern sky every few nights, generating roughly 10 million difference-image alerts every single night of operations. Each alert carries photometry, cutout images, and contextual metadata for a transient, variable, or moving object.</p>
+                    <p>No human can review this flood of data. AI and machine learning are not optional — they are essential infrastructure for doing science with Rubin.</p>
+                    <ul class="data-features">
+                        <li>~10 million alerts per night from difference imaging</li>
+                        <li>Rich per-alert context: light curves, cutouts, host info</li>
+                        <li>Distributed through community alert brokers</li>
+                        <li>Requires real-time classification and prioritization</li>
+                        <li>Enormous opportunity for rare event discovery</li>
+                    </ul>
+                </div>
+                <div class="data-visual">
+                    <div class="data-visual-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Vera C. Rubin Observatory</span>
+                        <span style="font-size: 0.8rem;">First light 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goals Section -->
+    <section class="section section-primary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What We'll Build</span>
+                <h2>Hackathon Goals</h2>
+                <p>Three days of focused, collaborative development on AI tools for the Rubin alert ecosystem</p>
+            </div>
+            <div class="goals-grid">
+                <div class="goal-item">
+                    <div class="goal-number">01</div>
+                    <div class="goal-content">
+                        <h4>Real-Time Alert Classification</h4>
+                        <p>Develop and benchmark AI models for rapid classification of Rubin alerts into transient types, variable stars, and other astrophysical phenomena.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-number">02</div>
+                    <div class="goal-content">
+                        <h4>Alert Filtering &amp; Prioritization</h4>
+                        <p>Build intelligent filtering systems that help scientists identify the most scientifically interesting alerts from the nightly stream for follow-up observations.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-number">03</div>
+                    <div class="goal-content">
+                        <h4>Multi-Modal Data Fusion</h4>
+                        <p>Combine photometric light curves, difference-image cutouts, host galaxy information, and contextual metadata to improve classification accuracy.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-number">04</div>
+                    <div class="goal-content">
+                        <h4>Anomaly Detection</h4>
+                        <p>Identify unusual or previously unknown classes of objects in alert streams — the unexpected discoveries that make large surveys transformative.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-number">05</div>
+                    <div class="goal-content">
+                        <h4>Scalable Pipelines</h4>
+                        <p>Design and prototype open-source pipelines capable of ingesting, processing, and responding to Rubin-scale alert volumes in near real-time.</p>
+                    </div>
+                </div>
+                <div class="goal-item">
+                    <div class="goal-number">06</div>
+                    <div class="goal-content">
+                        <h4>Community Tools &amp; Standards</h4>
+                        <p>Foster the development of shared datasets, evaluation benchmarks, and best practices that will serve the broader Rubin science community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section class="section section-tertiary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Mark Your Calendar</span>
+                <h2>Important Dates</h2>
+            </div>
+            <div class="dates-timeline">
+                <div class="date-item">
+                    <div class="date-badge">
+                        <span class="month">Mar</span>
+                        <span class="day">3</span>
+                    </div>
+                    <div class="date-content">
+                        <h4>Registration Opens</h4>
+                        <p>Online registration portal opens for all participants. Space is limited — early registration is encouraged.</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="date-badge">
+                        <span class="month">Mar</span>
+                        <span class="day">20</span>
+                    </div>
+                    <div class="date-content">
+                        <h4>Registration Closes</h4>
+                        <p>Final deadline for hackathon registration. Late registrations may be accepted on a space-available basis.</p>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="date-badge">
+                        <span class="month">Apr</span>
+                        <span class="day">1–3</span>
+                    </div>
+                    <div class="date-content">
+                        <h4>Rubin Alerts &amp; AI Hackathon</h4>
+                        <p>Three days of collaborative hacking, presentations, and working sessions at SkAI Institute, Chicago.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Rubin Alerts &amp; AI Hackathon 2026</h4>
+                <p>A hands-on hackathon developing AI tools for the Vera C. Rubin Observatory alert stream.</p>
+                <p class="mt-sm">April 1–3, 2026<br>SkAI Institute, Chicago, IL</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" class="jiggle-link">Home</a></li>
+                    <li><a href="program.html" class="jiggle-link">Program</a></li>
+                    <li><a href="participants.html" class="jiggle-link">Participants &amp; Registration</a></li>
+                    <li><a href="travel.html" class="jiggle-link">Travel &amp; Lodging</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:rubinalerts@lists.skai-institute.org" class="jiggle-link">rubinalerts@lists.skai-institute.org</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rubin Alerts &amp; AI Hackathon. Hosted at SkAI Institute.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-toggle').checked = false;
+            });
+        });
+
+        function generateStars() {
+            const starsContainer = document.getElementById('stars');
+            if (!starsContainer) return;
+            for (let i = 0; i < 80; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                star.style.opacity = Math.random() * 0.5 + 0.3;
+                starsContainer.appendChild(star);
+            }
+        }
+        generateStars();
+    </script>
+</body>
+</html>
