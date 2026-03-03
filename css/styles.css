@@ -1330,15 +1330,14 @@ a:hover {
    Footer Logos
    ============================================ */
 .footer-logos {
-    max-width: 1200px;
-    margin: var(--spacing-lg) auto 0;
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid rgba(0, 186, 188, 0.1);
+    background: #ffffff;
+    margin: var(--spacing-lg) calc(-1 * var(--spacing-lg)) 0;
+    padding: var(--spacing-lg);
 }
 
 .footer-logos-label {
     text-align: center;
-    color: var(--text-muted);
+    color: #555555;
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1367,7 +1366,7 @@ a:hover {
 
 .footer-funding-note {
     text-align: center;
-    color: var(--text-muted);
+    color: #555555;
     font-size: 0.85rem;
     margin: 0;
 }
