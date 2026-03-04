@@ -1370,18 +1370,18 @@ a:hover {
 }
 
 /* ============================================
-   Venue Map
+   Venue Map (inline in card)
    ============================================ */
-.venue-map {
-    margin-top: var(--spacing-lg);
-    border-radius: var(--radius-lg);
+.venue-map-inline {
+    margin: var(--spacing-md) calc(-1 * var(--spacing-lg)) calc(-1 * var(--spacing-lg));
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(0, 186, 188, 0.2);
+    border-top: 1px solid rgba(0, 186, 188, 0.2);
 }
 
-.venue-map iframe {
+.venue-map-inline iframe {
     width: 100%;
-    height: 400px;
+    height: 300px;
     border: none;
     display: block;
 }
@@ -1391,6 +1391,7 @@ a:hover {
     padding: var(--spacing-xs) var(--spacing-sm);
     background: var(--bg-card);
     font-size: 0.8rem;
+    margin: 0;
 }
 
 .venue-map-link a {
@@ -1398,8 +1399,8 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    .venue-map iframe {
-        height: 280px;
+    .venue-map-inline iframe {
+        height: 220px;
     }
 }
 
