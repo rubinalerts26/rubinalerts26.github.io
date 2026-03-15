@@ -11,7 +11,7 @@ Static website for the Rubin Alerts & AI Hackathon (April 1–3, 2026, SkAI Inst
 - `index.html` — Home page (vision, hackathon goals, important dates)
 - `program.html` — Hackathon schedule
 - `participants.html` — Participant cards and registration info
-- `travel.html` — Travel and lodging (Westin Michigan Ave, Chicago)
+- `travel.html` — Travel and lodging (Marriott Downtown Magnificent Mile, Chicago)
 - `css/styles.css` — Single stylesheet with all CSS custom properties
 - `assets/images/` — Site images
 
@@ -31,9 +31,10 @@ python3 -m http.server 8000
 <div class="participant-card">
     <div class="participant-avatar">AB</div>
     <h4>Full Name</h4>
-    <p class="participant-affiliation">Institution</p>
+    <p class="participant-affiliation">Institution — In-Person</p>
 </div>
 ```
+Keep participants sorted by last name (A → Z). Attendance mode is shown in the affiliation line as `— In-Person`, `— Hybrid`, or `— Remote`. The source of truth for registrations is the Google Sheet: https://docs.google.com/spreadsheets/d/1kyWDkPsqkCn5lqblyAj7ksjKjrgEvStIAT80hrosEM0/edit
 
 **Add a schedule row** (`program.html`):
 ```html
