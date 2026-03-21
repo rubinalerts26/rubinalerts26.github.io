@@ -36,6 +36,12 @@ python3 -m http.server 8000
 ```
 Keep participants sorted by last name (A → Z). Attendance mode is shown in the affiliation line as `— In-Person`, `— Hybrid`, or `— Remote`. The source of truth for registrations is the Google Sheet: https://docs.google.com/spreadsheets/d/1kyWDkPsqkCn5lqblyAj7ksjKjrgEvStIAT80hrosEM0/edit
 
+To sync participants from the sheet, fetch it as CSV (follow the redirect):
+```
+https://docs.google.com/spreadsheets/d/1kyWDkPsqkCn5lqblyAj7ksjKjrgEvStIAT80hrosEM0/export?format=csv
+```
+Compare the sheet's name list against `participants.html` and add any missing entries. As of 2026-03-17 there are 38 confirmed participants.
+
 **Add a schedule row** (`program.html`):
 ```html
 <tr>
