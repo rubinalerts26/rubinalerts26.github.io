@@ -66,6 +66,34 @@ Use `class="schedule-break"` on `<tr>` for breaks, with `colspan="2"` on the con
 </div>
 ```
 
+## Post-Event Admin
+
+**Registration fees**: $100 in-person, $25 hybrid (per Elise Ahn; not on website).
+
+**Unpaid registrants**: determined from red-highlighted rows in the registration Google Sheet
+(organizer ground truth — self-reported form field is unreliable). 12 people did not pay.
+
+**Refund calculations** (finalized 2026-04-08, verified with Erin Cox):
+- Full details: `_admin/rubinalerts26_refunds.md`
+- Local pool list (UIUC/NU/UC): `_admin/rubinalerts26_refunds_local.md`
+- Non-local pool list: `_admin/rubinalerts26_refunds_nonlocal.md`
+- SOC signoff message: `_admin/rubinalerts26_soc_message.md`
+
+`_admin/` is in `.gitignore` — not pushed to the public repo.
+
+**Pool 1 — Local SkAI (UIUC/NU/UC), $1,034.17**: equal split among 16 non-faculty/staff who
+paid the in-person fee. $64.64/$64.63 each.
+
+**Pool 2 — Non-local, $7,500**: fee refund (what each person paid) + flat travel honorarium
+($6,150 ÷ 15 actual in-person attendees = $410.00 each). Remote attendees get fee refund only.
+
+**Status**: Elise Ahn and Jay Alameda notified 2026-04-08 to begin processing.
+
+**Key contacts**: Elise Ahn (fee records), Erin Cox (payment verification), Jay Alameda (processing).
+
+**Wynn Jacobson-Galan** (Caltech postdoc): lives in Chicago with courtesy NU appointment —
+treated as local, gets $0 (did not pay fee, no travel expenses to offset).
+
 ## Design Constraints
 
 - No white backgrounds — all sections use blue tints
