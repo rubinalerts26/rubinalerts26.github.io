@@ -17,7 +17,11 @@ Static website for the Rubin Alerts & AI Hackathon (April 1–3, 2026, SkAI Inst
 
 ## Deployment
 
-GitHub Pages from `main` branch at `https://rubinalerts26.github.io/`. No Jekyll; push to main to deploy.
+GitHub Pages from `main` branch at `https://rubinalerts26.github.io/`. Push to main to deploy.
+
+Jekyll runs passively (no Liquid templates or front matter used) — `_config.yml` exists solely
+to exclude non-web files from the built site: `CLAUDE.md`, `README.md`, `_admin/`, `*.py`.
+Do not add a `.nojekyll` file — it would re-expose those files.
 
 To preview locally:
 ```
