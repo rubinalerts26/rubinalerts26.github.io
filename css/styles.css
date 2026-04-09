@@ -1430,3 +1430,104 @@ a:hover {
         padding: 1rem;
     }
 }
+
+/* Group photo section (index.html, between hero and vision) */
+.group-photo-section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+.group-photo-feature {
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.group-photo-feature img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+.group-photo-feature figcaption {
+    margin-top: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Photo carousel */
+.photo-carousel {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: rgba(10, 22, 40, 0.6);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+.photo-carousel-track {
+    position: relative;
+    aspect-ratio: 3 / 2;
+}
+.photo-carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+}
+.photo-carousel-slide.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.photo-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.photo-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 22, 40, 0.6);
+    color: var(--color-light);
+    border: 1px solid rgba(144, 205, 244, 0.4);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-carousel-btn:hover {
+    background: rgba(0, 186, 188, 0.55);
+}
+.photo-carousel-prev {
+    left: var(--spacing-md);
+}
+.photo-carousel-next {
+    right: var(--spacing-md);
+}
+.photo-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: var(--spacing-sm) 0;
+    background: rgba(10, 22, 40, 0.75);
+}
+.photo-carousel-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: rgba(144, 205, 244, 0.35);
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease;
+}
+.photo-carousel-dots button.is-active {
+    background: var(--color-accent);
+}

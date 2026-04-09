@@ -44,6 +44,74 @@
         <p>Join us to build the AI tools that will unlock Rubin science</p>
     </section>
 
+    <!-- Photo Carousel -->
+    <section class="section section-primary">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Hackathon Moments</span>
+                <h2>Scenes from the Hackathon</h2>
+                <p>Three days of hacking, talks, and collaboration at the SkAI Institute</p>
+            </div>
+            <div class="photo-carousel" id="photoCarousel">
+                <div class="photo-carousel-track">
+                    <div class="photo-carousel-slide is-active">
+                        <img src="assets/images/hackathon/hackathon-01.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 1"
+                             loading="eager" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-02.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 2"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-03.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 3"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-04.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 4"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-05.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 5"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-06.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 6"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-07.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 7"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-08.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 8"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-09.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 9"
+                             loading="lazy" decoding="async">
+                    </div>
+                    <div class="photo-carousel-slide">
+                        <img src="assets/images/hackathon/hackathon-10.jpg"
+                             alt="Rubin Alerts &amp; AI Hackathon 2026 — photo 10"
+                             loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <button class="photo-carousel-btn photo-carousel-prev" aria-label="Previous photo">&#10094;</button>
+                <button class="photo-carousel-btn photo-carousel-next" aria-label="Next photo">&#10095;</button>
+                <div class="photo-carousel-dots" role="tablist"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Registration Section -->
     <section class="section section-secondary">
         <div class="container">
@@ -497,6 +565,57 @@
                 document.getElementById('nav-toggle').checked = false;
             });
         });
+
+        (function initCarousel() {
+            const carousel = document.getElementById('photoCarousel');
+            if (!carousel) return;
+            const slides = carousel.querySelectorAll('.photo-carousel-slide');
+            const dotsContainer = carousel.querySelector('.photo-carousel-dots');
+            const DELAY = 4000;
+            let idx = 0;
+            let timer = null;
+
+            slides.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+                dot.setAttribute('role', 'tab');
+                if (i === 0) dot.classList.add('is-active');
+                dot.addEventListener('click', () => { go(i); resetTimer(); });
+                dotsContainer.appendChild(dot);
+            });
+
+            function go(next) {
+                slides[idx].classList.remove('is-active');
+                dotsContainer.children[idx].classList.remove('is-active');
+                idx = (next + slides.length) % slides.length;
+                slides[idx].classList.add('is-active');
+                dotsContainer.children[idx].classList.add('is-active');
+            }
+
+            function startTimer() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(() => go(idx + 1), DELAY);
+            }
+
+            function resetTimer() { startTimer(); }
+
+            carousel.querySelector('.photo-carousel-prev')
+                .addEventListener('click', () => { go(idx - 1); resetTimer(); });
+            carousel.querySelector('.photo-carousel-next')
+                .addEventListener('click', () => { go(idx + 1); resetTimer(); });
+
+            carousel.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); timer = null; });
+            carousel.addEventListener('mouseleave', startTimer);
+
+            // Start timer only when the carousel scrolls into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) { startTimer(); }
+                    else { if (timer) clearInterval(timer); timer = null; }
+                });
+            }, { threshold: 0.25 });
+            observer.observe(carousel);
+        })();
     </script>
 </body>
 </html>
